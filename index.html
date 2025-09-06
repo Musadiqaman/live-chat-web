@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Live Chat Website</title>
+    <style>
+        /* Basic Styling for the webpage */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .content p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        /* Talk.to Icon style */
+        .chat-icon {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Welcome to My Live Chat Website</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Connect with us instantly!</h1>
+        <p>Click the chat icon to start a conversation with our team!</p>
+    </div>
+
+    <!-- Chat Icon (Talk.to) -->
+    <div class="chat-icon" id="chat-icon">
+        💬
+    </div>
+
+    <!-- Talk.to Widget Script -->
+    <script type="text/javascript">
+        var _talk = _talk || [];
+        _talk.push(['_setAccount', 'YOUR_ACCOUNT_ID']);
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = 'https://widget.talk.to/widget.js';
+            document.body.appendChild(script);
+        })();
+
+        // Open the chat widget when the icon is clicked
+        document.getElementById('chat-icon').onclick = function() {
+            window._talk.push(['_open']);
+        };
+    </script>
+
+</body>
+</html>
