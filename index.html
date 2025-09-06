@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Live Chat Website</title>
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/68bc1357721af15d8753211e/1j4fan3rm';  <!-- Updated script -->
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
+
     <style>
         /* Basic Styling for the webpage */
         body {
@@ -30,7 +46,7 @@
             font-size: 1.2em;
             color: #666;
         }
-        /* Talk.to Icon style */
+        /* Chat Icon style */
         .chat-icon {
             position: fixed;
             bottom: 10px;
@@ -59,28 +75,10 @@
         <p>Click the chat icon to start a conversation with our team!</p>
     </div>
 
-    <!-- Chat Icon (Talk.to) -->
+    <!-- Chat Icon -->
     <div class="chat-icon" id="chat-icon">
         💬
     </div>
-
-    <!-- Talk.to Widget Script -->
-    <script type="text/javascript">
-        var _talk = _talk || [];
-        _talk.push(['_setAccount', 'YOUR_ACCOUNT_ID']);
-        (function() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = 'https://widget.talk.to/widget.js';
-            document.body.appendChild(script);
-        })();
-
-        // Open the chat widget when the icon is clicked
-        document.getElementById('chat-icon').onclick = function() {
-            window._talk.push(['_open']);
-        };
-    </script>
 
 </body>
 </html>
